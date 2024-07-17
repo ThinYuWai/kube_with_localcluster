@@ -1,0 +1,4 @@
+.vagrant/
+configs/
+.*
+.sudo_as_admin_successful
