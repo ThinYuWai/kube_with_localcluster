@@ -8,7 +8,7 @@ CPUS_MASTER_NODE    = 4
 MEMORY_MASTER_NODE  = 2048
 CPUS_WORKER_NODE    = 2
 MEMORY_WORKER_NODE  = 1024
-VAGRANT_BOX_IMAGE   = "bento/ubuntu-23.04"
+VAGRANT_BOX_IMAGE   = "bento/ubuntu-24.04"
 
 Vagrant.configure("2") do |config|
 
