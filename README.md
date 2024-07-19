@@ -1,10 +1,16 @@
+This scenerio is that we create one control-plane and three worker node in local.
+The following is the step by step procedure.
+
+Before installing, we need to create the following folder and genearte ssh key for vagrant vm 
 ```
 mkdir master node01 node02 node03
 ssh-keygen
+pwd
 ```
 
 Update SSH KEY path in VagrantFile and Run the following Command 
 ```
+config.ssh.private_key_path = "xxxxxxxx" => Update this part with your private key path
 vagrant up 
 vagrant status
 ```
@@ -38,6 +44,7 @@ $ sh node.sh ( Optional )
 $ sudo kubeadm join [master node ip]:6443 --token klmudq.ogr8tdkoy0n9hh2a --discovery-token-ca-cert-hash sha256:2ebd75679c5e612dce52be841fa3d85cac8caf423285977c6435f24136fe2917
 ```
 
+Run with kubectl command 
 ```
 $ kubectl get nodes
 $ kubectl label node worker-node01 node-role.kubernetes.io/worker=worker-new
